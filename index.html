@@ -1626,6 +1626,7 @@ async function sendLoginNotification(email) {
       time:        timeStr,
       message:     'New login on Agent Hero prototype from: ' + email,
       user_agent:  navigator.userAgent.substring(0, 120),
+      source:      window.location.href,
       to_email:    EMAILJS_CONFIG.notifyEmail
     });
     console.info('[Agent Hero] Login notification sent for:', email);
